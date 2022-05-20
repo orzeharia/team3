@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="../static/pizzaJS.js"></script>
+    <link rel="stylesheet" href="../static/pizzaCSS.css">
+
+</head>
+<body>
+   
+    <!-- Sign up form -->
+    <div id="signUpDiv">
+        <h1>Sign Up</h1><br><br>
+
+        <form name="signUpForm" class="signUpForm" action="URL" method="post" onsubmit="SignUp(); return false;">
+
+            <!-- name -->
+            <div class="signUpField">
+                <label for="Username">User Name</label>
+                <input type="text" id="Username" name="Username" autocomplete="on" required>   
+            </div><br><br><br><br>
+           
+            <!-- email -->
+            <div class="signUpField">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="on" required>         
+            </div><br><br><br> 
+          
+            <!-- birthday -->
+            <div class="signUpField">
+                <label for="birthdate">Birthdate</label>
+                <input type="date" id="birthdate" class="dateField" name="birthdate" max="2022-05-20" required>   
+            </div><br><br><br> 
+     
+            <!-- password -->
+            <div class="signUpField">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="8" required>  
+            </div><br><br><br> 
+          
+            <!--verify password -->
+            <div class="signUpField">
+                <label for="verifyPassword">Verify Password</label>
+                <input type="password" id="verifyPassword" name="verifyPassword" minlength="8" required>   
+            </div><br><br><br> 
+   
+            
+            <!-- submit form button -->
+            <input type="submit" id="btnSubmit" name="submit" value="Sign Me Up" /><br><br>
+
+            <p id="errorMessage"></p>
+
+
+        </form><br>
+    </div>
+
+    
+</body>
+</html>

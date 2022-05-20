@@ -21,6 +21,12 @@ function SignUp() {
 
 
 
+  //sign in function
+function LogIn() {
+    window.alert("Logged in successfully"); 
+}
+
+
 
   
 /* go to order afer answer thw qution*/

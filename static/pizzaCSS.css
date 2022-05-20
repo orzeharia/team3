@@ -5,7 +5,6 @@ label {
     display: inline-block;
     width: 10%;
     text-align: left;
-    overflow-wrap: normal;
 }
 
 /*inputs fields design*/
@@ -64,6 +63,18 @@ input {
 }
 
 /*...................................... */
+
+
+
+/* -------------- Sign Up -------------- */
+
+#logInDiv {
+    text-align: center;
+}
+/*...................................... */
+
+
+
 
 
 

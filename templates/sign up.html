@@ -10,7 +10,17 @@
 
 </head>
 <body>
-   
+
+    <!-- Nav bar -->
+    <header>
+        <a href="../templates/home.html">Home</a>
+        <a href="../templates/about_us.html">About Us</a>
+        <a href="../templates/gallery.html">Gallery</a>
+        <a href="../templates/my_account.html">My Account</a>
+        <a href="../templates/contact_us.html">Contact</a>
+        <a href="../templates/order.html">Order</a>
+    </header>
+
     <!-- Sign up form -->
     <div id="signUpDiv">
         <h1>Sign Up</h1><br><br>
@@ -21,7 +31,7 @@
             <div class="signUpField">
                 <label for="Username">User Name</label>
                 <input type="text" id="Username" name="Username" autocomplete="on" required>   
-            </div><br><br><br><br>
+            </div><br><br><br>
            
             <!-- email -->
             <div class="signUpField">
@@ -49,8 +59,10 @@
    
             
             <!-- submit form button -->
-            <input type="submit" id="btnSubmit" name="submit" value="Sign Me Up" /><br><br>
+            <input type="submit" id="btnSubmit" class="button" name="submit" value="Submit" /><br><br>
 
+
+            <!-- sign up error message -->
             <p id="errorMessage"></p>
 
 

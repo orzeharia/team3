@@ -1,3 +1,51 @@
+/* -------------- General -------------- */
+
+/*labels alignment*/
+label {
+    display: inline-block;
+    width: 10%;
+    text-align: left;
+}
+
+/*inputs fields design*/
+input {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+/*buttons class design*/
+.button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: royalblue;
+}
+
+/*screen adjustments*/
+@media only screen and (max-width: 600px) {
+
+    input,
+    label {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+
+    }
+}
+
+/*...................................... */
+
+
+
+
+/* -------------- Sign Up -------------- */
 
 /*error message in sign up form in red*/
 #errorMessage {
@@ -9,36 +57,54 @@
     text-align: center;
 }
 
-/*sign up form label alignment*/
-.signUpForm label {
-    display: inline-block;
-    width: 10%;
-    text-align: left;
-
-}
-
 /*birtdate input in sign up form alignment*/
-.dateField{
-	width:160px;
+.dateField {
+    width: 160px;
+    text-align: center;
+}
+
+/*...................................... */
+
+
+
+/* -------------- Gallery -------------- */
+
+
+#galleryDiv{
+
+    text-align: center;
+
+
 }
 
 
-@media only screen and (max-width: 600px) {
 
-    input, label {
-        display:block;
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
-
-    }
- 
-    #signUpDiv {
-        align-items: center;
-    }
-
- 
-
-
-   
+/*gallery class design*/
+.galleryImage {
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 350px;
+    height: 300px;
 }
+
+.galleryImage:hover {
+    border: 2px solid #777;
+}
+
+/*image design*/
+.galleryImage img {
+    width: 220px;
+    height: auto;
+}
+
+/*image description design*/
+.imageDesc {
+    padding: 15px;
+    text-align: center;
+    height: auto;
+
+}
+
+
+/*...................................... */

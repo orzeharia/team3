@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="../static/pizzaJS.js"></script>
+    <link rel="stylesheet" href="../static/pizzaCSS.css">
+</head>
+<body>
+
+    <header>
+        <a href="../templates/home.html">Home</a>
+        <a href="../templates/about_us.html">About Us</a>
+        <a href="../templates/gallery.html">Gallery</a>
+        <a href="../templates/my_account.html">My Account</a>
+        <a href="../templates/contact_us.html">Contact</a>
+        <a href="../templates/Order_qestions.html">Order Qstions</a>
+        <a href="../templates/order.html">Order</a>
+    </header>
+    
+<div id="questionOrder">
+    <h1>
+        Questions for the order
+    </h1>
+    <br><br><br>
+        <label for="season" class="QU">What is your favorite season?</label><br>
+            <select name="season" class="AN_QU" id="Que1">
+              <option value="winter">winter</option>
+              <option value="summer">summer</option>
+              <option value="Fall">Fall</option>
+              <option value="Spring">Spring</option>
+            </select>
+
+            <br><br><br>
+        <label for="continent" class="QU">Which continent would you most like to live on?</label><br>
+            <select name="continent" class="AN_QU" id="Que2">
+              <option value="America">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Australia">Australia</option>
+              <option value="Europe">Europe</option>
+              <option value="Antarctica">Antarctica</option>
+            </select>
+
+            <br><br><br>
+            <label for="meal" class="QU">What do you prefer for a big breakfast or a big dinner?</label><br>
+                <select name="meal" class="AN_QU" id="Que3">
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                </select>
+
+<br><br><br><br><br><br>
+
+                <button id="go_order" onclick="go()"> find me a pizza </button>
+                <p id="type_pizza"></p>
+
+</div>    
+
+
+
+
+
+</body>
+</html>

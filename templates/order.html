@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/pizzaCSS.css">
     <title>Document</title>
+
+    <script defer src="../static/pizzaJS.js"></script>
+    <link rel="stylesheet" href="../static/pizzaCSS.css">
+
+
 </head>
+
 <body>
+
     <header>
         <a href="../templates/home.html">Home</a>
         <a href="../templates/about_us.html">About Us</a>
         <a href="../templates/gallery.html">Gallery</a>
         <a href="../templates/my_account.html">My Account</a>
         <a href="../templates/contact_us.html">Contact</a>
+        <a href="../templates/Order_qestions.html">Order Qstions</a>
         <a href="../templates/order.html">Order</a>
     </header>
+    <br><br>
+    <div id="container">
+        <div id="order">
+            <label for="numPizza">amount of pizzas</label><br>
+            <input id="num_pizza" type="number" name="num" min="0" max="10"><br><br>
+            <label for="delivery">delivery fairs</label>
+            <p id="price_delivery"></p>
+            <label for="price_pizza">total price</label>
+            <p id="total_price"></p>
+
+        </div>
+
+        <div id="pizza_description">
+            <p id="pizzaChosen">the pizza for you is </p>
+            <p id="descriptionPizza"> </p> <br><br>
+            <p id="pizza_price"></p>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
 </body>
+
 </html>

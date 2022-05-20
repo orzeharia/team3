@@ -5,6 +5,7 @@ label {
     display: inline-block;
     width: 10%;
     text-align: left;
+    overflow-wrap: normal;
 }
 
 /*inputs fields design*/
@@ -36,7 +37,6 @@ input {
         margin-right: auto;
         margin-left: auto;
         text-align: center;
-
     }
 }
 
@@ -69,14 +69,9 @@ input {
 
 /* -------------- Gallery -------------- */
 
-
 #galleryDiv{
-
     text-align: center;
-
-
 }
-
 
 
 /*gallery class design*/
@@ -108,3 +103,65 @@ input {
 
 
 /*...................................... */
+
+
+
+
+
+
+/* -------- Questions for order -------- */
+body{
+    background-color: #FFFDD0;
+}
+
+#questionOrder{
+    text-align: center;
+}
+
+.QU{
+    font-size: 20px;
+}
+
+.AN_QU{
+    font-size: 15px;   
+}
+
+
+#go_order{
+    background-color:rgb(240, 240, 118);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+   
+}
+#container{
+    display: grid;
+    grid-template-areas: 'pizza_description order'  
+   ;
+}
+
+#pizza_description{
+    grid-area: pizza_description;
+  
+
+}
+#order{
+    grid-area: order;
+  
+
+}
+@media only screen and (max-width: 600px) {
+    #container{
+        display: grid;
+        grid-template-areas: 'pizza_description'  ' order'
+      
+       ;
+    }
+}
+
+/*...................................... */
+

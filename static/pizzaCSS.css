@@ -1,3 +1,55 @@
+/* question for order ------------*/
+body{
+    background-color: #FFFDD0;
+}
+
+#questionOrder{
+    text-align: center;
+
+}
+
+.QU{
+    font-size: 20px;
+}
+
+.AN_QU{
+    font-size: 15px;   
+}
+
+
+#go_order{
+    background-color:rgb(240, 240, 118);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+   
+}
+#container{
+    display: grid;
+    grid-template-areas: 'pizza_description order'  ;
+   
+}
+
+#pizza_description{
+    grid-area: pizza_description;
+  
+
+}
+#order{
+    grid-area: order;
+  
+
+}
+
+
+/* question for order end ---------------*/
+
+
+
 
 /*error message in sign up form in red*/
 #errorMessage {
@@ -37,7 +89,10 @@
         align-items: center;
     }
 
- 
+    #container{
+        display: grid;
+        grid-template-areas: 'pizza_description'  ' order' ;
+    }
 
 
    

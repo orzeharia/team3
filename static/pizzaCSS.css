@@ -121,9 +121,6 @@ input {
 
 
 /* -------- Questions for order -------- */
-body{
-    background-color: #FFFDD0;
-}
 
 #questionOrder{
     text-align: center;
@@ -139,7 +136,6 @@ body{
 
 
 #go_order{
-    background-color:rgb(240, 240, 118);
     font-size: 16px;
     cursor: pointer;
     border-radius: 50%;

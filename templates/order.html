@@ -27,18 +27,29 @@
     <br><br>
     <div id="container">
         <div id="order">
-            <label for="numPizza">amount of pizzas</label><br>
-            <input id="num_pizza" type="number" name="num" min="0" max="10"><br><br>
-            <label for="delivery">delivery fairs</label>
-            <p id="price_delivery"></p>
-            <label for="price_pizza">total price</label>
+            <p  class="Details">amount of pizzas</p>
+            <input id="num_pizza" type="number" name="num" min="0" max="10">
+           <p  class="Details"> delivery fairs  </p>
+            <p id="price_delivery">20</p>
+            <button onclick="calPrice()">calculation</button>
+            <p class="Details" >total price</p>
             <p id="total_price"></p>
 
         </div>
 
         <div id="pizza_description">
-            <p id="pizzaChosen">the pizza for you is </p>
-            <p id="descriptionPizza"> </p> <br><br>
+            <button id="step1" onclick="discription()">step1 to my pizza</button>
+           <div id="a"></div>
+            <p class="Details">the pizza for you is: </p>
+
+          <p id="pic">
+
+          </p>
+
+            <p id="pizzaChosen"></p>
+            <p class="Details">description</p>
+            <p id="descriptionPizza"> </p>
+            <p class="Details">price:</p>
             <p id="pizza_price"></p>
 
         </div>

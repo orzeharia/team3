@@ -1,41 +1,47 @@
 
-function SignUp() {
+ var pizza;
 
-    //password validation
+
+//function for signing up. checks the validation of the password
+function SignUp() {
     const password = document.getElementById("password").value;
     const verifyPassword = document.getElementById("verifyPassword").value;
-    // at least one number, one lowercase and one uppercase letter and at least 8 characters
+
+    //password validation: at least one number, one lowercase and one uppercase letter and at least 8 characters
     var valid = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+
     if (valid.test(password) == false){
         document.getElementById("errorMessage").innerHTML = "The password must contain at least one number, one lowercase and one uppercase letter";
     }
     else if (password !== verifyPassword){
         document.getElementById("errorMessage").innerHTML = "The passwords does not match";
     }
-    else {
+    else{
+        document.getElementById("errorMessage").innerHTML = "";
         window.alert("Sign up successfully"); 
     }
-
   }
-
-/* go to order afer answer thw qution*/
-function go(){
-    findpizza();
-  
-    location.href ="file:///C:/Users/User/Desktop/%D7%A9%D7%A0%D7%94%20%D7%92/%D7%A1%D7%99%D7%9E%D7%A1%D7%98%D7%A8%20%D7%91/WEB%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98/team3/templates/order.html" ;
-    document.getElementById("pizzaChosen").innerHTML = localStorage.getItem("pizza_ty");
-
-    console.log(pizza);
-    console.log(pizza_ty);
-}
 
 
   var count = 0;
-  var pizza_ty =localStorage.getItem("pizza");
+
   
+
+
+/* go to order afer answer thw qution*/
+function go(){
+    
+    findpizza();
+   location.href ="../templates/order.html" ;
+    
+}
+
+
+ 
   
 
   function findpizza(){
+   
 
 if(document.getElementById("Que1").value=="winter"){
     count=count+1;
@@ -72,46 +78,84 @@ if(document.getElementById("Que3").value=="no"){
 }
 
 if(count<=66){
-    document.getElementById("type_pizza").innerHTML="crazy pizza" ; 
-    localStorage.setItem("pizza", "1");
+    pizza=1;
+    localStorage.setItem("pizzaCh",pizza);
 
 }
 
 if(count<=40){
-    document.getElementById("type_pizza").innerHTML="pizza Mexican" ; 
-    localStorage.setItem("pizza", "2");
+   pizza=2;
+   localStorage.setItem("pizzaCh",pizza);
 
 }
 
 if(count<=20){
-document.getElementById("type_pizza").innerHTML="pizza italy";
-localStorage.setItem("pizza", "3");
+pizza=3;
+localStorage.setItem("pizzaCh",pizza);
 }
   }
 
 
 
-function discription(){
+var pizzaForYou=0;
+function discription( ){
 
-    if(document.getElementById("type_pizza").value=="crazy pizza"){
-      document.getElementById("descriptionPizza").innerHTML="crazzyyy";
-    }
-    if(document.getElementById("type_pizza").value=="pizza italy"){
-        document.getElementById("descriptionPizza").innerHTML="ITALYYY";
-      }
-      if(document.getElementById("type_pizza").value=="pizza Mexican"){
-        document.getElementById("descriptionPizza").innerHTML="Mexicannnn";
-      }
-}
+    document.getElementById('a').innerHTML += "<input type='radio'>";
+    document.getElementById("step1").disabled=true;
 
-function pricePizza(){
-    if(document.getElementById("type_pizza").value=="crazy pizza"){
+    pizzaForYou=localStorage.getItem("pizzaCh");
+    
+
+    if(pizzaForYou=="1"){
+        document.getElementById("pizzaChosen").innerHTML="crazy pizza";
+      document.getElementById("descriptionPizza").innerHTML="Sweet s'mores pizza";
       document.getElementById("pizza_price").innerHTML="90";
+      var img = document.createElement('img');
+      img.src ="../static/pizza5.jpg" ;
+      document.getElementById("pic").appendChild(img);
     }
-    if(document.getElementById("type_pizza").value=="pizza italy"){
+    if(pizzaForYou=="2"){
+        document.getElementById("pizzaChosen").innerHTML= "pizza Mexican" ; 
+        document.getElementById("descriptionPizza").innerHTML="Guacamole, jalapeno and mozzarella pizza";
         document.getElementById("pizza_price").innerHTML="100";
+        var img = document.createElement('img');
+        img.src ="../static/pizza7.jpg" ;
+        document.getElementById("pic").appendChild(img);
       }
-      if(document.getElementById("type_pizza").value=="pizza Mexican"){
-        document.getElementById("pizza_price").innerHTML="80";
+      if(pizzaForYou=="3"){
+        document.getElementById("pizzaChosen").innerHTML="pizza italy";
+        document.getElementById("descriptionPizza").innerHTML="Corn, tomato, bell pepper and olive pizza";
+        document.getElementById("pizza_price").innerHTML="110";
+
+        var img = document.createElement('img');
+            img.src ="../static/pizza1.png" ;
+            document.getElementById("pic").appendChild(img);
+    
       }
 }
+
+function calPrice(){
+
+    if(document.getElementById("num_pizza").value!==""){
+
+        if(pizzaForYou=="1"){
+            document.getElementById("total_price").innerHTML=  document.getElementById("pizza_price").textContent*document.getElementById("num_pizza").value+20 ;
+            }
+        
+            if(pizzaForYou=="2"){
+            document.getElementById("total_price").innerHTML= document.getElementById("pizza_price").textContent*document.getElementById("num_pizza").value+20 ;
+             } 
+        
+            if(pizzaForYou=="3"){
+             document.getElementById("total_price").innerHTML= document.getElementById("pizza_price").textContent *document.getElementById("num_pizza").value+20 ;
+             }
+
+    }
+    else{
+        window.alert("מלא את מספר הפיצות");
+    }
+    
+  
+}
+
+

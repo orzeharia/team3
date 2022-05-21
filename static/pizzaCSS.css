@@ -1,11 +1,131 @@
-/* question for order ------------*/
+
+
+
+/* -------------- General -------------- */
+
+/*labels alignment*/
+label {
+    display: inline-block;
+    width: 10%;
+    text-align: left;
+    overflow-wrap: normal;
+}
+
+/*inputs fields design*/
+input {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+/*buttons class design*/
+.button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: royalblue;
+}
+
+/*screen adjustments*/
+@media only screen and (max-width: 600px) {
+
+    input,
+    label {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+}
+
+/*...................................... */
+
+
+
+
+/* -------------- Sign Up -------------- */
+
+/*error message in sign up form in red*/
+#errorMessage {
+    color: red;
+}
+
+/*align sign up form to center*/
+#signUpDiv {
+    text-align: center;
+}
+
+/*birtdate input in sign up form alignment*/
+.dateField {
+    width: 160px;
+    text-align: center;
+}
+
+/*...................................... */
+
+
+
+/* -------------- Gallery -------------- */
+
+#galleryDiv{
+    text-align: center;
+}
+
+
+/*gallery class design*/
+.galleryImage {
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 350px;
+    height: 300px;
+}
+
+.galleryImage:hover {
+    border: 2px solid #777;
+}
+
+/*image design*/
+.galleryImage img {
+    width: 220px;
+    height: auto;
+}
+
+
+    #container{
+        display: grid;
+        grid-template-areas: 'pizza_description'  ' order' ;
+    }
+
+/*image description design*/
+.imageDesc {
+    padding: 15px;
+    text-align: center;
+    height: auto;
+
+}
+
+
+
+/*...................................... */
+
+
+
+
+
+
+/* -------- Questions for order -------- */
 body{
     background-color: #FFFDD0;
 }
 
 #questionOrder{
     text-align: center;
-
 }
 
 .QU{
@@ -30,8 +150,8 @@ body{
 }
 #container{
     display: grid;
-    grid-template-areas: 'pizza_description order'  ;
-   
+    grid-template-areas: 'pizza_description order'  
+   ;
 }
 
 #pizza_description{
@@ -40,60 +160,27 @@ body{
 
 }
 #order{
+    border: 2px #777 solid ;
     grid-area: order;
-  
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+
 
 }
-
-
-/* question for order end ---------------*/
-
-
-
-
-/*error message in sign up form in red*/
-#errorMessage {
-    color: red;
-}
-
-/*align sign up form to center*/
-#signUpDiv {
-    text-align: center;
-}
-
-/*sign up form label alignment*/
-.signUpForm label {
-    display: inline-block;
-    width: 10%;
-    text-align: left;
-
-}
-
-/*birtdate input in sign up form alignment*/
-.dateField{
-	width:160px;
-}
-
-
 @media only screen and (max-width: 600px) {
-
-    input, label {
-        display:block;
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
-
-    }
- 
-    #signUpDiv {
-        align-items: center;
-    }
-
     #container{
         display: grid;
-        grid-template-areas: 'pizza_description'  ' order' ;
+        grid-template-areas: 'pizza_description'  ' order'
+      
+       ;
     }
-
-
-   
 }
+
+.Details{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*...................................... */
+

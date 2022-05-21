@@ -8,7 +8,6 @@ label {
     display: inline-block;
     width: 10%;
     text-align: left;
-    overflow-wrap: normal;
 }
 
 /*inputs fields design*/
@@ -70,6 +69,18 @@ input {
 
 
 
+/* -------------- Sign Up -------------- */
+
+#logInDiv {
+    text-align: center;
+}
+/*...................................... */
+
+
+
+
+
+
 /* -------------- Gallery -------------- */
 
 #galleryDiv{
@@ -120,9 +131,6 @@ input {
 
 
 /* -------- Questions for order -------- */
-body{
-    background-color: #FFFDD0;
-}
 
 #questionOrder{
     text-align: center;
@@ -138,7 +146,6 @@ body{
 
 
 #go_order{
-    background-color:rgb(240, 240, 118);
     font-size: 16px;
     cursor: pointer;
     border-radius: 50%;

@@ -23,7 +23,17 @@ function SignUp() {
   }
 
 
+<<<<<<< HEAD
   var count = 0;
+=======
+
+  //sign in function
+function LogIn() {
+    window.alert("Logged in successfully"); 
+}
+
+
+>>>>>>> 86cbaa1735d90210e7f93bf119f76a57f3d67c94
 
   
 

@@ -23,9 +23,6 @@ function SignUp() {
   }
 
 
-<<<<<<< HEAD
-  var count = 0;
-=======
 
   //sign in function
 function LogIn() {
@@ -33,14 +30,13 @@ function LogIn() {
 }
 
 
->>>>>>> 86cbaa1735d90210e7f93bf119f76a57f3d67c94
-
+var count = 0;
   
 
 
 /* go to order afer answer thw qution*/
 function go(){
-    
+    console.log("ncncnc");
     findpizza();
    location.href ="../templates/order.html" ;
     
@@ -110,7 +106,7 @@ localStorage.setItem("pizzaCh",pizza);
 var pizzaForYou=0;
 function discription( ){
 
-    document.getElementById('a').innerHTML += "<input type='radio'>";
+   
     document.getElementById("step1").disabled=true;
 
     pizzaForYou=localStorage.getItem("pizzaCh");

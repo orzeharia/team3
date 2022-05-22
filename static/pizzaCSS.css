@@ -131,6 +131,7 @@ input {
 
 
 /* -------- Questions for order -------- */
+   
 
 #questionOrder{
     text-align: center;
@@ -146,6 +147,7 @@ input {
 
 
 #go_order{
+     background-color: yellow;
     font-size: 16px;
     cursor: pointer;
     border-radius: 50%;
@@ -163,6 +165,7 @@ input {
 
 #pizza_description{
     grid-area: pizza_description;
+    margin: 20px;
   
 
 }

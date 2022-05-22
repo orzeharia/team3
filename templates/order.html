@@ -9,6 +9,8 @@
 
     <script defer src="../static/pizzaJS.js"></script>
     <link rel="stylesheet" href="../static/pizzaCSS.css">
+ 
+
 
 
 </head>
@@ -21,8 +23,8 @@
         <a href="../templates/gallery.html">Gallery</a>
         <a href="../templates/my_account.html">My Account</a>
         <a href="../templates/contact_us.html">Contact</a>
-        <a href="../templates/Order_qestions.html">Order Qstions</a>
-        <a href="../templates/order.html">Order</a>
+        <a href="../templates/Order_qestions.html">Order</a>
+       
     </header>
     <br><br>
     <div id="container">
@@ -31,14 +33,14 @@
             <input id="num_pizza" type="number" name="num" min="0" max="10">
            <p  class="Details"> delivery fairs  </p>
             <p id="price_delivery">20</p>
-            <button onclick="calPrice()">calculation</button>
+            <button onclick="calPrice()" class="button">calculation</button>
             <p class="Details" >total price</p>
             <p id="total_price"></p>
 
         </div>
 
         <div id="pizza_description">
-            <button id="step1" onclick="discription()">step1 to my pizza</button>
+            <button id="step1" onclick="discription()" class="button">click here to reveal your pizza</button>
            <div id="a"></div>
             <p class="Details">the pizza for you is: </p>
 

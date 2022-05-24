@@ -258,9 +258,7 @@ margin: 30px auto;
 @media only screen and (max-width: 600px) {
     #container{
         display: grid;
-        grid-template-areas: 'pizza_description'  ' order'
-      
-       ;
+        grid-template-areas: 'pizza_description'  ' order';
     }
 }
 
@@ -269,5 +267,40 @@ margin: 30px auto;
     font-weight: bold;
 }
 
-/*...................................... */
+/*.............order confirmation............... */
+    
+#OCpersonalDetails{
+    grid-area: MainP;
+    
+}
+#OCpaymentDetails{
+    grid-area: MainC;
+    
+}
+#OCtitle{
+    margin: 15px auto;
+    padding: 10px ;
+}
+#OCsubmit{
+    grid-area: Footer;
+    width: 200px;
+    margin: 10px auto;
+}
+#OCform{
+    display: grid;
+    grid-template-areas: 'MainP MainC'
+                         'MainP MainC'
+                         'Footer Footer';
+}
+.OCfield{
+    margin: 0 110px;
+}
+@media only screen and (max-width: 700px){ 
+    #OCform{
+        display: grid;
+        grid-template-areas: 'MainP '
+                             'MainC '
+                             'Footer ';
+    }
+}
 

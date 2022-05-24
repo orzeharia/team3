@@ -74,9 +74,86 @@ input {
 #logInDiv {
     text-align: center;
 }
-/*...................................... */
+/*..................personal zone................. */
+
+.circleBase{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 15px;
+    height: 110px;
+    width: 110px;
+    overflow: hidden; 
+    margin: 10px auto;
+    
+}
+
+#personalZonePage{
+    display: grid;
+    grid-template-areas:'Header1 Main Header2' 
+                        'Buttom Buttom Buttom' 
+                        'Buttom Buttom Buttom';
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#points{
+    grid-area: Header1;
+    margin-top: 25%;
+    text-align: center;
+    font-size: 40px;
+}
+#pointsText{
+    grid-area: Header1;
+    margin-top: 15%;
+    text-align: center;
+}
+
+#welcomeZone{
+grid-area: Main;
+padding:20px;
+text-align: center;
+font-size: 20px;
+margin: 30px auto;
+}
+
+#birthday{
+    grid-area: Header2;
+    margin-top: 25%;
+    text-align: center;
+    font-size: 40px;
+}
+#birthdayText{
+    grid-area: Header2;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#history{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+#historyBox{
+    height: 500px;
+    grid-area: Buttom;
+    border: 5px solid black;
+    overflow: scroll;
+    margin: 20px;
+    
+}
 
 
+@media only screen and (max-width: 500px) {
+    #personalZonePage{
+        display: grid;
+        grid-template-areas: 'Main' 
+                             'Header1' 
+                             'Header2'
+                             'Buttom';
+    }
+}
 
 
 

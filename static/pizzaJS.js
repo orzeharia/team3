@@ -23,9 +23,7 @@ function SignUp() {
   }
 
 
-<<<<<<< HEAD
   var count = 0;
-=======
 
   //sign in function
 function LogIn() {
@@ -33,7 +31,6 @@ function LogIn() {
 }
 
 
->>>>>>> 86cbaa1735d90210e7f93bf119f76a57f3d67c94
 
   
 
@@ -167,5 +164,3 @@ function calPrice(){
     
   
 }
-
-

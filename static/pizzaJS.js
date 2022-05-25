@@ -164,6 +164,28 @@ function calPrice(){
   
 }
 
+function goToOC(){
+    const qty = document.getElementById("num_pizza").value;
+    if (qty== ""){
+        alert(`please fill out the wanted quantity`);
+       }
+    else{
+        location.href ="../templates/OrderConfirmation.html" ;
+    }
+
+}
+
+// When the user clicks -> open the popup
+function openPopUp(){ //need to add validation that the form is full!!!
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("modal").style.display = "block";
+}
+
+
+function closePopUp(){
+    location.href ="../templates/home.html" ;
+}
+
 // OC page
 var today = new Date();
 var dd = today.getDate();

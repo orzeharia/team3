@@ -74,6 +74,8 @@ label {
     display: inline-block;
     width: 10%;
     text-align: left;
+    overflow-wrap: normal;
+
 }
 
 /*inputs fields design*/
@@ -549,11 +551,11 @@ details{
     margin: 0 110px;
     font-size: 20px;
 }
-
+/*
 input, label {
     display:block;
     
-}
+}*/
 label{
     display: inline;
  

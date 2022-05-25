@@ -201,6 +201,15 @@ if (mm < 10) {
 } 
     
 today = yyyy + '-' + mm + '-' + dd;
-document.getElementById("expDate").setAttribute("min", today); //exp. must be in the future
+
+
+const curPage = window.location.pathname;
+if (curPage.includes("sign%20up.html")){
+    document.getElementById("birthdate").setAttribute("max", today); //exp. must be in the future
+}
+if (curPage.includes("OrderConfirmation.html")){
+    document.getElementById("expDate").setAttribute("min", today); //exp. must be in the future
+}
+
 
 

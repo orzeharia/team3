@@ -176,15 +176,20 @@ function goToOC(){
 }
 
 // When the user clicks -> open the popup
-function openPopUp(){ //need to add validation that the form is full!!!
-        document.getElementById("overlay").style.display = "block";
-        document.getElementById("modal").style.display = "block";
+
+
+function openPopUp(){ 
+    event.preventDefault(); //to prevent the oage reload
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("modal").style.display = "block";
 }
 
 
 function closePopUp(){
     location.href ="../templates/home.html" ;
 }
+
+
 
 // OC page
 var today = new Date();
@@ -205,7 +210,7 @@ today = yyyy + '-' + mm + '-' + dd;
 
 const curPage = window.location.pathname;
 if (curPage.includes("sign%20up.html")){
-    document.getElementById("birthdate").setAttribute("max", today); //exp. must be in the future
+    document.getElementById("birthdate").setAttribute("max", today); //birthday must be in the past
 }
 if (curPage.includes("OrderConfirmation.html")){
     document.getElementById("expDate").setAttribute("min", today); //exp. must be in the future

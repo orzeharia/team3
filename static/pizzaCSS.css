@@ -278,6 +278,7 @@ font-style: italic;
 
 .home-page__paragraph{
     font-size: 20px;
+    line-height: 1.8;
 }
 
 .home__order__btn{
@@ -353,6 +354,10 @@ details{
     font-style: italic;
 }
 .grid-item-content{
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+    margin-left: 15px;
 
 }
 
@@ -646,18 +651,6 @@ label{
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5) ;
 }
-
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
 
 footer{
   background-color:#26272b;

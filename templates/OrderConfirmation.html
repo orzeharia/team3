@@ -29,9 +29,9 @@
     </div>
 
     <div id="OC">
-        <h1 id="OCtitle">to compelte your order we just need few more details...</h1><br><br>
+        <h1 id="OCtitle" >to compelte your order we just need few more details...</h1><br><br>
 
-        <form id="OCform"  method="post" >
+        <form action="" id="OCform"  method="post" onsubmit="openPopUp()" >
             
             <div class="OCpersonalDetails">
                 <!-- Email -->
@@ -50,7 +50,7 @@
                <!-- address -->
                 <div class="OCfield">
                     <label for="address">Address</label>
-                    <input type="text" id="address" name="address"  required>   <!-- to connact to google maps? -->
+                    <input type="text" id="address" name="address"  required>   
                </div><br><br><br> 
      
                 <!-- phone number -->
@@ -92,11 +92,12 @@
             
             
             <!-- finish button -->
-            <button onclick="openPopUp()" id="submitOC" >bring me my pizza</button>  
+            <input type="submit" value="bring me my pizza"  id="submitOC">
+   
             <div class="modal" id="modal">
                 <div class="modal-header">
                     <div class="title"> Thanks for your order!</div>
-                    <button onclick="closePopUp()" class="close-button">&times;</button>
+                    <button type="submit" onclick="closePopUp()" class="close-button" >&times;</button>
                 </div>
                 <div class="modal-body">we are making sure your order will be ready ASAP and we will deliver it to you on the best way. enjoy :)</div>
             </div>

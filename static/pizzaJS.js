@@ -163,3 +163,53 @@ function calPrice(){
     
   
 }
+
+function goToOC(){
+    const qty = document.getElementById("num_pizza").value;
+    if (qty== ""){
+        alert(`please fill out the wanted quantity`);
+       }
+    else{
+        location.href ="../templates/OrderConfirmation.html" ;
+    }
+
+}
+
+// When the user clicks -> open the popup
+function openPopUp(){ //need to add validation that the form is full!!!
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("modal").style.display = "block";
+}
+
+
+function closePopUp(){
+    location.href ="../templates/home.html" ;
+}
+
+// OC page
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+
+if (dd < 10) {
+   dd = '0' + dd;
+}
+
+if (mm < 10) {
+   mm = '0' + mm;
+} 
+    
+today = yyyy + '-' + mm + '-' + dd;
+
+
+const curPage = window.location.pathname;
+if (curPage.includes("sign%20up.html")){
+    document.getElementById("birthdate").setAttribute("max", today); //exp. must be in the future
+}
+if (curPage.includes("OrderConfirmation.html")){
+    document.getElementById("expDate").setAttribute("min", today); //exp. must be in the future
+}
+
+
+

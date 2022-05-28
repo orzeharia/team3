@@ -1,9 +1,9 @@
 const activePage = window.location.pathname;
 /* -------------- Home -------------- */
-if (activePage.includes("home.html")){
-document.querySelector("#homeOrderBtn").addEventListener("click",()=>{
-     window.location.href = window.location.href.replace("home.html","Order_qestions.html")
-})
+if (activePage.includes("home.html")) {
+    document.querySelector("#homeOrderBtn").addEventListener("click", () => {
+        window.location.href = window.location.href.replace("home.html", "Order_qestions.html")
+    })
 }
 
 

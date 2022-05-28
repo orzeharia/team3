@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
     <link rel="stylesheet" href="../static/pizzaCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
 
     <!-- Nav bar -->
@@ -38,34 +41,34 @@
             <!-- name -->
             <div class="signUpField">
                 <label for="Fullname">Full Name</label>
-                <input type="text" id="Fullname" name="Fullname" autocomplete="on" required>   
+                <input type="text" id="Fullname" name="Fullname" autocomplete="on" required>
             </div><br><br><br>
-           
+
             <!-- email -->
             <div class="signUpField">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="on" required>         
-            </div><br><br><br> 
-          
+                <input type="email" id="email" name="email" autocomplete="on" required>
+            </div><br><br><br>
+
             <!-- birthday -->
             <div class="signUpField">
                 <label for="birthdate">Birthdate</label>
-                <input type="date" id="birthdate" class="dateField" name="birthdate" max="2022-05-20" required>   
-            </div><br><br><br> 
-     
+                <input type="date" id="birthdate" class="dateField" name="birthdate" max="2022-05-20" required>
+            </div><br><br><br>
+
             <!-- password -->
             <div class="signUpField">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" minlength="8" required>  
-            </div><br><br><br> 
-          
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div><br><br><br>
+
             <!--verify password -->
             <div class="signUpField">
                 <label for="verifyPassword">Verify Password</label>
-                <input type="password" id="verifyPassword" name="verifyPassword" minlength="8" required>   
-            </div><br><br><br> 
-   
-            
+                <input type="password" id="verifyPassword" name="verifyPassword" minlength="8" required>
+            </div><br><br><br>
+
+
             <!-- sign up button -->
             <input type="submit" id="btnSubmit" class="button" name="submit" value="Sign Up" /><br><br>
 
@@ -78,11 +81,18 @@
     </div>
     <footer>
         <h4>
-            This is a footer
+            CHECK OUT OUR SOCIALS
         </h4>
-    
-    </footer> 
+        <ul class="socials">
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </footer>
     <script src="../static/pizzaJS.js"></script>
     <script src="../static/2pizzaJS.js"></script>
 </body>
+
 </html>

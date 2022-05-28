@@ -8,10 +8,7 @@
     <title>Order</title>
 
     <link rel="stylesheet" href="../static/pizzaCSS.css">
- 
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -36,24 +33,24 @@
     <br><br>
     <div id="container">
         <div id="order">
-            <p  class="Details">amount of pizzas</p>
+            <p class="Details">amount of pizzas</p>
             <input id="num_pizza" type="number" name="num" min="0" max="10">
-           <p  class="Details"> delivery fairs  </p>
+            <p class="Details"> delivery fairs </p>
             <p id="price_delivery">20</p>
             <button onclick="calPrice()" class="button">calculation</button>
-            <p class="Details" >total price</p>
+            <p class="Details">total price</p>
             <p id="total_price"></p>
 
         </div>
 
         <div id="pizza_description">
             <button id="step1" onclick="discription()" class="button">click here to reveal your pizza</button>
-           <div id="a"></div>
+            <div id="a"></div>
             <p class="Details">the pizza for you is: </p>
 
-          <p id="pic">
+            <p id="pic">
 
-          </p>
+            </p>
 
             <p id="pizzaChosen"></p>
             <p class="Details">description</p>
@@ -71,10 +68,16 @@
     </div>
     <footer>
         <h4>
-            This is a footer
+            CHECK OUT OUR SOCIALS
         </h4>
-    
-    </footer> 
+        <ul class="socials">
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </footer>
     <script src="../static/pizzaJS.js"></script>
     <script src="../static/2pizzaJS.js"></script>
 </body>

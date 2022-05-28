@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,10 @@
     <title>OrderConfirmation</title>
     <script defer src="../static/pizzaJS.js"></script>
     <link rel="stylesheet" href="../static/pizzaCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
     <!-- Nav bar -->
     <div class="headerDiv">
@@ -29,37 +33,37 @@
     </div>
 
     <div id="OC">
-        <h1 id="OCtitle" >to compelte your order we just need few more details...</h1><br><br>
+        <h1 id="OCtitle">to compelte your order we just need few more details...</h1><br><br>
 
-        <form action="" id="OCform"  method="post" onsubmit="openPopUp()" >
-            
+        <form action="" id="OCform" method="post" onsubmit="openPopUp()">
+
             <div class="OCpersonalDetails">
                 <!-- Email -->
                 <div class="OCfield">
                     <label for="Email">Email</label>
-                    <input type="email" id="email" name="email" autocomplete="on" required>   
+                    <input type="email" id="email" name="email" autocomplete="on" required>
                 </div><br><br><br>
 
                 <!-- time -->
                 <div class="OCfield">
                     <label for="time">Wanted time</label>
                     <input type="time" id="time" name="time" min="11:00" max="22:00" required>
-                    <small>delivery hours are 11am to 10pm</small>         
-                </div><br><br><br> 
-          
-               <!-- address -->
+                    <small>delivery hours are 11am to 10pm</small>
+                </div><br><br><br>
+
+                <!-- address -->
                 <div class="OCfield">
                     <label for="address">Address</label>
-                    <input type="text" id="address" name="address"  required>   
-               </div><br><br><br> 
-     
+                    <input type="text" id="address" name="address" required>
+                </div><br><br><br>
+
                 <!-- phone number -->
                 <div class="OCfield">
                     <label for="phoneNum">Phone number</label>
-                    <input type="tel" id="tel" name="tel" required>  
-                </div><br><br><br> 
+                    <input type="tel" id="tel" name="tel" required>
+                </div><br><br><br>
             </div>
-           
+
             <div class="OCpaymentDetails">
                 <!--credit type -->
                 <div class="OCfield">
@@ -68,49 +72,57 @@
                         <option value="Visa">Visa</option>
                         <option value="MasterCard">MasterCard</option>
                         <option value="American Express">American Express</option>
-                    </select>  
-                </div><br><br><br> 
-            
+                    </select>
+                </div><br><br><br>
+
                 <!-- creditNum -->
                 <div class="OCfield">
                     <label for="creditNum">Credit card number</label>
-                    <input type="number" id="creditNum" name="creditNum" required>  
-                </div><br><br><br> 
+                    <input type="number" id="creditNum" name="creditNum" required>
+                </div><br><br><br>
 
                 <!-- CVV -->
                 <div class="OCfield">
                     <label for="CVV">CVV</label>
-                    <input type="number" id="CVV" name="CVV" required>  
-                </div><br><br><br> 
+                    <input type="number" id="CVV" name="CVV" required>
+                </div><br><br><br>
 
                 <!-- exp. date -->
                 <div class="OCfield">
                     <label for="expDate">Expiration date</label>
-                    <input type="date" id="expDate" name="expDate" min="1900-01-01" required>  
-                </div><br><br><br> 
+                    <input type="date" id="expDate" name="expDate" min="1900-01-01" required>
+                </div><br><br><br>
             </div>
-            
-            
+
+
             <!-- finish button -->
-            <input type="submit" value="bring me my pizza"  id="submitOC">
-   
+            <input type="submit" value="bring me my pizza" id="submitOC">
+
             <div class="modal" id="modal">
                 <div class="modal-header">
                     <div class="title"> Thanks for your order!</div>
-                    <button type="submit" onclick="closePopUp()" class="close-button" >&times;</button>
+                    <button type="submit" onclick="closePopUp()" class="close-button">&times;</button>
                 </div>
-                <div class="modal-body">we are making sure your order will be ready ASAP and we will deliver it to you on the best way. enjoy :)</div>
+                <div class="modal-body">we are making sure your order will be ready ASAP and we will deliver it to you
+                    on the best way. enjoy :)</div>
             </div>
             <div id="overlay"></div>
-       
+
         </form><br>
         <footer>
             <h4>
-                This is a footer
+                CHECK OUT OUR SOCIALS
             </h4>
-        
-        </footer> 
+            <ul class="socials">
+                <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </footer>
         <script src="../static/pizzaJS.js"></script>
         <script src="../static/2pizzaJS.js"></script>
 </body>
+
 </html>

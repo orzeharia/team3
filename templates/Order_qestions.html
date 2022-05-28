@@ -1,79 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <title>Order</title>
-    <link rel="stylesheet" href="../static/pizzaCSS.css">
+  <title>Order</title>
+  <link rel="stylesheet" href="../static/pizzaCSS.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
 
   <div class="headerDiv">
     <header>
-        <a href="../templates/home.html">Home</a>
-        <a href="../templates/about_us.html">About Us</a>
-        <a href="../templates/gallery.html">Gallery</a>
-        <a href="../templates/my_account.html">My Account</a>
-        <a href="../templates/contact_us.html">Contact</a>
-        <a href="../templates/Order_qestions.html">Order</a>
-        <a href="../templates/sign up.html">Sign Up</a>
-        <a href="../templates/log in.html">Log In</a>
+      <a href="../templates/home.html">Home</a>
+      <a href="../templates/about_us.html">About Us</a>
+      <a href="../templates/gallery.html">Gallery</a>
+      <a href="../templates/my_account.html">My Account</a>
+      <a href="../templates/contact_us.html">Contact</a>
+      <a href="../templates/Order_qestions.html">Order</a>
+      <a href="../templates/sign up.html">Sign Up</a>
+      <a href="../templates/log in.html">Log In</a>
     </header>
-</div>
-<div class="greeting-image">
+  </div>
+  <div class="greeting-image">
     <div class="logo__container">
-        <img class="headerImg" src="../static/logo_transparent.png" alt="Logo">
+      <img class="headerImg" src="../static/logo_transparent.png" alt="Logo">
     </div>
-</div>
-    
-<div id="questionOrder">
+  </div>
+
+  <div id="questionOrder">
     <h1>
-        Questions for the order
+      Questions for the order
     </h1>
     <br>
     <p class="QU">What is your favorite season?</p><br>
-            <select name="season" class="AN_QU" id="Que1">
-              <option value="winter">winter</option>
-              <option value="summer">summer</option>
-              <option value="Fall">Fall</option>
-              <option value="Spring">Spring</option>
-            </select>
+    <select name="season" class="AN_QU" id="Que1">
+      <option value="winter">winter</option>
+      <option value="summer">summer</option>
+      <option value="Fall">Fall</option>
+      <option value="Spring">Spring</option>
+    </select>
 
-            <br><br><br>
-            <p class="QU">Which continent would you most like to live on?</p>
-            <select name="continent" class="AN_QU" id="Que2">
-              <option value="America">America</option>
-              <option value="Asia">Asia</option>
-              <option value="Australia">Australia</option>
-              <option value="Europe">Europe</option>
-              <option value="Antarctica">Antarctica</option>
-            </select>
+    <br><br><br>
+    <p class="QU">Which continent would you most like to live on?</p>
+    <select name="continent" class="AN_QU" id="Que2">
+      <option value="America">America</option>
+      <option value="Asia">Asia</option>
+      <option value="Australia">Australia</option>
+      <option value="Europe">Europe</option>
+      <option value="Antarctica">Antarctica</option>
+    </select>
 
-            <br><br><br>
-            <p class="QU"> Do you prefer a big or small meal for breakfast?</p><br>
-                <select name="meal" class="AN_QU" id="Que3">
-                  <option value="yes">yes</option>
-                  <option value="no">no</option>
-                </select>
+    <br><br><br>
+    <p class="QU"> Do you prefer a big or small meal for breakfast?</p><br>
+    <select name="meal" class="AN_QU" id="Que3">
+      <option value="yes">yes</option>
+      <option value="no">no</option>
+    </select>
 
-<br><br><br><br>
+    <br><br><br><br>
 
-                <button id="go_order" onclick="go()"> find me a pizza </button>
-                <p id="type_pizza"></p>
+    <button id="go_order" onclick="go()"> find me a pizza </button>
+    <p id="type_pizza"></p>
 
-</div>    
+  </div>
 
 
 
-<footer>
-  <h4>
-      This is a footer
-  </h4>
-
-</footer> 
-<script src="../static/pizzaJS.js"></script>
-<script src="../static/2pizzaJS.js"></script>
+  <footer>
+    <h4>
+        CHECK OUT OUR SOCIALS
+    </h4>
+    <ul class="socials">
+        <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.youtube.com/watch?v=BBJa32lCaaY"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+</footer>
+  <script src="../static/pizzaJS.js"></script>
+  <script src="../static/2pizzaJS.js"></script>
 </body>
+
 </html>

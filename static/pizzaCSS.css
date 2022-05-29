@@ -383,10 +383,7 @@ details {
     text-align: center;
 }
 
-.mapImg {
-    width: 50%;
-    border-radius: 10%;
-}
+
 
 .grid-item-hours {}
 
@@ -508,6 +505,14 @@ details {
 
 }
 
+#map {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    
+  }
+
+
 #container {
     display: grid;
     grid-template-areas: 'pizza_description order'
@@ -516,7 +521,9 @@ details {
 
 #pizza_description {
     grid-area: pizza_description;
-    margin: 20px;
+    margin: 60px;
+    padding: auto;
+
 
 
 }

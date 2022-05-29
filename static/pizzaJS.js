@@ -44,7 +44,7 @@ function go() {
 
 
 
-
+/* choose pizza by count of quetion*/
 
 function findpizza() {
 
@@ -101,7 +101,7 @@ function findpizza() {
     }
 }
 
-
+/*display discription of pizza*/
 
 var pizzaForYou = 0;
 function discription() {
@@ -139,6 +139,8 @@ function discription() {
 
     }
 }
+
+/* calculate price of delivery*/
 
 function calPrice() {
 

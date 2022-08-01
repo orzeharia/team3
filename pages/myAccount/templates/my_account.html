@@ -1,0 +1,114 @@
+
+{% extends 'base.html' %}
+{% set title='My Account' %}
+{% block title %}{{ title }} Page {% endblock %}
+{% set page = 'My Account' %}
+
+{% block content %}
+
+
+{% if session['loggedin'] %}
+<div id="personalZonePage">
+
+    <div class="circleBase">
+        <div id="points"> {{points}} </div>
+        <div id="pointsText">points</div>
+    </div>
+
+    <h1 class="welcomeZone">Hi {{name | default('Stranger',true)}}, welcome to your pizza zone!</h1>
+
+    <div class="circleBase">
+        <div id="birthday"> {{days}}</div>
+        <div id="birthdayText"> days until BD pizza</div>
+    </div>
+    <div id="historyBox">
+        <h2 id="history">
+            your pizza history!
+        </h2>
+        {% if allOrders %}
+        <table class="table">
+            <tr class="table_header">
+                <th class="table_cell">Order Time</th>
+                <th class="table_cell">Time Wanted</th>
+                <th class="table_cell">Address</th>
+                <th class="table_cell">Phone Number</th>
+                <th class="table_cell">Pizza</th>
+                <th class="table_cell">Amount</th>
+                <th class="table_cell">Total Price</th>
+            </tr>
+            {% for order in allOrders %}
+            <tr class="table_row">
+                <td class="table_cell">{{order.order_time}}</td>
+                <td class="table_cell">{{order.time_wanted}}</td>
+                <td class="table_cell">{{order.address}}</td>
+                <td class="table_cell">{{order.phone_number}}</td>
+                <td class="table_cell">{{order.pizza}}</td>
+                <td class="table_cell">{{order.amount}}</td>
+                <td class="table_cell">{{order.total_price}}$</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+        {% else %}
+        <div id="noHistory"> whoopsie, it seems like you didn't make any order yet.. it's always a good time for a
+            pizza!</div>
+        {% endif %}
+    </div>
+
+</div>
+
+<!-- Update Form -->
+<div id="update_user">
+    <h1> Update Details</h1>
+
+    <!-- Update button -->
+    <button id="btn_update_user" class="button">Update Details</button><br><br>
+
+    <form id="update_user_form" style="display: none" action="/update_user" method="post">
+
+        <!-- email -->
+        <div class="signUpField">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" >
+        </div><br><br><br>
+
+         <!-- name -->
+        <div class="signUpField">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+        </div><br><br><br>
+
+        <!-- password -->
+        <div class="signUpField">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minlength="8" >
+        </div><br><br><br>
+
+        <input type="submit" id="btnUpdate" class="button" name="btnUpdate" value="Save Changes" /><br><br>
+    </form>
+</div>
+
+
+<!-- Delete Form -->
+<div id="delete_user">
+    <h1> Delete Account</h1>
+
+    <!-- Delete button -->
+    <form id="delete_user_form" action="/delete_user" method="post">
+        <input type="submit" id="btnDelete" class="button" name="btnUpdate" value="Delete Account" /><br><br>
+    </form>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script src="/js/my_account.js"></script>
+<script src="{{ url_for('my_account.static', filename='js/my_account.js') }}"></script>
+
+
+{% else %}
+<h1 class="welcomeZone">Oops! You need to log in to view your personal zone</h1>
+
+{% endif %}
+
+{% endblock %}
+

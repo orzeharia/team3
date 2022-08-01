@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% set title='Order' %}
+{% block title %}{{ title }} Page {% endblock %}
+{% set page = 'Order' %}
+
+{% block content %}
+<div id="container">
+    <div id="order">
+
+
+        <form action="/pizza_del" method="post">
+            <p class="Details">amount of pizzas</p>
+            <input id="num_pizza" type="number" name="num" min="1" max="10" value="{{numPizza}}" required>
+            <p class="Details"> delivery fairs </p>
+            <p id="price_delivery" name="delivery">20</p>
+            <button class="button">Add to cart</button>
+
+
+        </form>
+        <p class="Details">total price</p>
+        <p id="total_price">{{RES}}</p><br>
+        {% if points %}
+        <p class="Details">Your Total Points:</p>
+        <p> {{ points }}</p>
+        {% endif %}
+
+        {% if points %}
+        {% if points >= RES %}
+        <form action="/free_pizza" method="post">
+            <p>You have enough points to get a free pizza!</p>
+            <input type="submit" class="button" value="Click Here To Get Your Free Pizza!">
+        </form>
+        {% endif %}
+        {% endif %}
+
+
+        {% if birthday %}
+        <form action="/birthday_pizza" method="post">
+            <p>Happy Birthday!</p>
+            <input type="submit" class="button" value="Click Here To Get Your Free Birthday Pizza!">
+        </form>
+        {% endif %}
+
+    </div>
+
+
+    <div id="pizza_description">
+        <div id="a"></div>
+        <p class="Details">The pizza for you is: </p>
+        <h2>{{name}} </h2>
+        <p id="pic">
+            <a target="_blank" href="{{url_for('static', filename=pic)}}">
+                <img src="../static/{{picture}}" alt="{{alt}}">
+            </a>
+        </p>
+
+        <p id="pizzaChosen"></p>
+        <p class="Details">Description</p>
+        <p id="descriptionPizza">{{description}}</p>
+        <p class="Details">Price</p>
+        <p id="pizza_price">{{price}}</p>
+
+    </div>
+
+</div>
+{% if session['total_price']%}
+<div class="set__order__btn">
+    <button  id="setOrderBtn" class="button" onclick="goToOC()">go to payment</button>
+</div>
+{% endif %}
+
+
+{% endblock %}

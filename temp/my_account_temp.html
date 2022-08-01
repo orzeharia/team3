@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+{% set title='My Account' %}
+{% block title %}{{ title }} Page {% endblock %}
+{% set page = 'My Account' %}
+
+{% block content %}
+
+
+    <div id="personalZonePage">
+
+        <div class="circleBase">
+            <div id="points"> {{ user.points }} </div>
+            <div id="pointsText">points</div>
+        </div>
+
+        <h1 id="welcomeZone">Hi {{ user.username }}, welcome to your pizza zone!</h1>
+
+        <div class="circleBase">
+            <div id="birthday"> {{ days }}</div>
+            <div id="birthdayText"> days until BD pizza</div>
+        </div>
+        <div id="historyBox">
+            <h2 id="history">
+                your pizza history:
+            </h2>
+            <div id="noHistory"> whoopsie, it seems like you didn't make any order yet.. it's always a good time for a
+                pizza!</div>
+             <p>{% for order in orders %}
+        <div >
+                {# {{ user }}#}
+            <h3>{{ user.name }}</h3>
+            <h4>Email: {{ user.email }}</h4>
+            <h3>Username: {{ user.user_name }}</h3>
+        </div>
+
+
+    </div>
+   {% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% set title='About Us' %}
+{% block title %}{{ title }} Page {% endblock %}
+{% set page = 'About Us' %}
+
+
+
+{% block content %}
+
+
+  <div id="aboutDiv">
+    <h1 class="about__us__title">About Us</h1>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <h1 class="grid-item-header">Reviews</h1>
+        <p class="grid-item-content">
+          Benet- "WOW the best pizza I've had in a long time, and the servise was amazing. you are the best pizzaIQ"
+          <br>Gantz- "listen to me, the idea of the funny and random questions and the surprise elemt is hysterical!!!""
+          <br>Yonit Levi- "the questions made our night to be so so funny, I couldn't stop laughing. and the quality of
+          the food is like 5 stars resturant"
+          <br>Haim Cohen- "I wish I could cook like you guys cook. the pizza is out of this world!"
+        </p>
+      </div>
+      <div class="grid-item">
+        <h1 class="grid-item-header">Our Story</h1>
+        <p class="grid-item-content"> There’s nothing cookie-cutter about PizzaIQ. Not our pizzas. Not our people. And
+          definitely not the way we live life. Around here, we don’t settle for anything less than food we’re proud to
+          serve and funny questions to make your day. And we don’t just clock in. Not when we can also become our best,
+          make friends, and have fun while we’re at it. We’re the pizza company that lives life unboxed.</p>
+      </div>
+      <div class="grid-item">
+        <p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.50608759019!2d34.811476685524184!3d31.262093566979228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150266f879d0c3e1%3A0x2e58887a229204b5!2z15HXkNeoINep15HXoiDXptek15XXnw!5e0!3m2!1siw!2sil!4v1659252261432!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </p>
+
+
+      </div>
+      <div class="grid-item">
+        <h1 class="grid-item-header">Opening Hours</h1>
+        <p class="grid-item-hours">Sunday-Friday: 8:00-23:00<br>
+          Saturday: 6:00-00:00
+        </p>
+      </div>
+    </div>
+    <div class="teamContainer">
+      <h2 class="grid-item-header">Our Team</h2>
+      <p class="grid-item-content">We Have The Best People</p>
+      <div class="team">
+        <div class="card">
+          <div>
+            <img class="teamImg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iJ9MAq2o5bbUyVZnVwDW1COzprEfXwjH1g&usqp=CAU">
+          </div>
+          <h4>Orr</h4>
+          <span>Head Pizza Woman</span>
+          <p>She is undoubtedly the admin of the whatsapp group.</p>
+        </div>
+        <div class="card">
+          <div>
+            <img class="teamImg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyhclQmrtDP4xViHmP_m4GOWTUFzDxYdhQmw&usqp=CAU">
+          </div>
+          <h4>Peleg</h4>
+          <span>Head Of International Pizza Decisions</span>
+          <p>Makes pizza decisions that no other person on the planet can.</p>
+        </div>
+        <div class="card">
+          <div>
+            <img class="teamImg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8CDaNW7GYa8EdRcOUeKW2k7rL5wupu3WkwA&usqp=CAU">
+          </div>
+          <h4>Hila</h4>
+          <span>Head Pizza Master</span>
+          <p>Just found out tofu is real and edible so that's cool.</p>
+        </div>
+        <div class="card">
+          <div>
+            <img class="teamImg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXnKngXrUmrwBCBwlcPAfqwmlHQazcEjLaQQ&usqp=CAU">
+          </div>
+          <h4>Idan</h4>
+          <span>Alive</span>
+          <p>Is here just in case someone get's put in jail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+   {% endblock %}

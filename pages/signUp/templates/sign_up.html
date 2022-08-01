@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% set title='Sign Up' %}
+{% block title %}{{ title }} Page {% endblock %}
+{% set page = 'Sign Up' %}
+
+{% block content %}
+
+    <!-- Sign up form -->
+    <div id="signUpDiv">
+        <h1>Sign Up</h1><br><br>
+
+        <form name="signUpForm" class="signUpForm" action="/create_user" method="post">
+
+            <!-- name -->
+            <div class="signUpField">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" autocomplete="on" required>
+            </div><br><br><br>
+
+            <!-- email -->
+            <div class="signUpField">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="on" required>
+            </div><br><br><br>
+
+            <!-- birthday -->
+            <div class="signUpField">
+                <label for="birthdate">Birthdate</label>
+                <input type="date" id="birthdate" class="dateField" name="birthdate" max="2022-05-20" required>
+            </div><br><br><br>
+
+            <!-- password -->
+            <div class="signUpField">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div><br><br><br>
+
+
+            <!--verify password -->
+            <div class="signUpField">
+                <label for="verifyPassword">Verify Password</label>
+                <input type="password" id="verifyPassword" name="verifyPassword" minlength="8" required>
+            </div><br><br><br>
+
+
+            <!-- sign up button -->
+            <input type="submit" id="btnSubmit" class="button" name="submit" value="Sign Up" /><br><br>
+
+
+            <!-- sign up error message -->
+            <p id="errorMessage"></p>
+
+
+        </form><br>
+    </div>
+    {% endblock %}

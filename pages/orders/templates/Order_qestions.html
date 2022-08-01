@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% set title='Order Questions' %}
+{% block title %}{{ title }} Page {% endblock %}
+{% set page = 'Order Questions' %}
+
+{% block content %}
+<div id="questionOrder">
+    <h1>
+        Questions for the order
+    </h1>
+    <br>
+
+    <form action="/pizza_cal" method="post">
+        <p class="QU">What is your favorite season?</p><br>
+        <select name="season" class="AN_QU" id="Que1">
+            <option value="winter">winter</option>
+            <option value="summer">summer</option>
+            <option value="Fall">Fall</option>
+            <option value="Spring">Spring</option>
+        </select>
+
+        <br><br><br>
+        <p class="QU">Which continent would you most like to live on?</p>
+        <select name="continent" class="AN_QU" id="Que2">
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Australia">Australia</option>
+            <option value="Europe">Europe</option>
+            <option value="Antarctica">Antarctica</option>
+        </select>
+
+        <br><br><br>
+        <p class="QU"> Do you prefer a big or small meal for breakfast?</p><br>
+        <select name="meal" class="AN_QU" id="Que3">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select>
+
+        <br><br><br><br>
+
+        <button id="go_order"> find me a pizza</button>
+        <p id="type_pizza"></p>
+
+
+</form>
+</div>
+
+{% endblock %}

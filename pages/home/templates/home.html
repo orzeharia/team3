@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+{% set title='Home' %}
+{% block title %}{{ title }} Page {% endblock %}
+{% set page = 'Home' %}
+
+<script src="{{ url_for('home.static', filename='js/home.js') }}"></script>
+
+
+{% block logo %}
+<div class="greeting-image">
+    <div class="logo__container">
+        <img class="homeHeaderImg" src="{{url_for('static', filename='logo_transparent.png')}}" alt="Logo">
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% if username %}
+<h1>Hello, {{ username }}!</h1>
+{% endif %}
+
+
+<div id="homeDiv">
+    <h1 class="home-page__title">we have the answers for you, we have the pizza for you</h1>
+    <h2 class="home-page__announcements">Special announcments</h2>
+    <div class="home-page__container">
+        <p class="home-page__paragraph">
+            How hard is it to choose what to eat? how much time does it take? don't you always scared that you'll
+            order something that is not to your taste?
+            <br>Here at PizzaIQ we are doing the hard work for you! no need to over think it,just answer some random
+            questions and we will match you the pizza of your dreams.
+            <br>We know, asking you which month you like might not be relevant to which pizza suits you. but hi it
+            works and we have 95% of successes.Also we have a big team of scientists behind us to help us help you.
+            <br>Every week we are using different random questions and by that we are increasing the quality of our
+            matches.
+            <br>Are you still here?! it's so simple! just click in and answer a few questions. it's that easy.
+            <br>Oh Hi, many benefits are waiting for our friends! don't assitat to sign up :)
+        </p>
+    </div>
+    <div class="home__order__btn">
+        <button id="homeOrderBtn" class="button" onclick="window.location='http://127.0.0.1:5000/Order_qestions'">ORDER NOW</button>
+    </div>
+</div>
+</div>
+{% endblock %}

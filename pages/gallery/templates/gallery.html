@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% set title='Gallery' %}
+{% block title %}{{ title }} Page {% endblock %}
+{% set page = 'Gallery' %}
+
+{% block content %}
+
+    <!-- Gallery -->
+    <div>
+        <h1>Gallery</h1><br><br>
+{% for pizza in allPizza %}
+         <div id="galleryDiv">
+            <div class="galleryImage">
+
+            <a target="_blank" href="{{url_for('static', filename=pic)}}">
+                <img src="../static/{{pizza.picture}}" alt="{{pizza.alt}}">
+            </a>
+
+                <div class="imageDesc">The {{ pizza.name }}</div>
+            <div class="imageDesc">Description: {{ pizza.description }}</div>
+                <div class="imageDesc">Price: {{ pizza.price }}</div>
+            </div>
+         </div>
+{% endfor %}
+
+    </div>
+       {% endblock %}
+
